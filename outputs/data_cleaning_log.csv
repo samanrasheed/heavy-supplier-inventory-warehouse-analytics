@@ -1,0 +1,11 @@
+Dataset,Column,Issue,Finding,Action
+purchase_orders_header,received_date,Missing values,"2370 missing values; all associated with Cancelled POs","Retained as missing because cancelled POs were not received"
+Multiple datasets,Date columns,Data types,"Date columns initially stored as object","Converted to datetime64[ns]"
+All datasets,All columns,Duplicate rows,"No exact duplicate rows found","No action required"
+Related datasets,Foreign keys,Relationship validation,"No invalid references in checked relationships","No action required"
+sales_orders_header,order_date and delivery_date,Date validation,"No delivery dates before order dates","No action required"
+purchase_orders_header,Order and delivery dates,Date validation,"No invalid date sequences found","No action required"
+invoices,invoice_date and due_date,Date validation,"No due dates before invoice dates","No action required"
+Multiple datasets,Numeric columns,Negative values,"No negative values found in checked columns","No action required"
+Multiple datasets,Categorical columns,Category consistency,"No obvious inconsistent category labels found","No standardization required"
+inventory_master and products,Stock levels,Business rules,"No stock hierarchy violations found","No action required"
